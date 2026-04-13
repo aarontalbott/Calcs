@@ -1,0 +1,101 @@
+:root {
+  --bg: #f4f6f8;
+  --panel: #ffffff;
+  --border: #d1d9e0;
+  --text: #1f2a33;
+  --muted: #6b7785;
+  --accent: #2e6f95;
+  --accent-light: #e6f0f6;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.header, .footer {
+  background: var(--panel);
+  padding: 0.75rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.footer {
+  border-top: 1px solid var(--border);
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 260px 1fr 260px;
+  gap: 12px;
+  padding: 12px;
+  overflow: hidden;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.center {
+  overflow: hidden;
+}
+
+.center-top, .center-bottom {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.panel-header {
+  background: var(--accent-light);
+  padding: 0.5rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-transform: uppercase;
+}
+
+.panel-content {
+  padding: 0.75rem;
+  overflow-y: auto;
+  flex: 1;
+}
+
+/* Inputs */
+input {
+  width: 100%;
+  padding: 0.4rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+
+/* Math styling */
+.math-block {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.result-highlight {
+  border-left: 4px solid var(--accent);
+  padding: 0.5rem;
+  background: #fafcfe;
+  margin-bottom: 0.5rem;
+}
